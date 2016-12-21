@@ -22,5 +22,5 @@ import polls.urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', view.urls_second),
-    url(r'^polls/', include(polls.urls)),
+    url(r'^polls/', include(polls.urls, namespace='polls')),
 ]

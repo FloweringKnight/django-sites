@@ -1,5 +1,7 @@
-from django.http import HttpResponse, Http404
+from django.shortcuts import render
+import os
 
 
 def urls_second(request):
-	return HttpResponse('Hello World')
+	context = {'dir': os.path.abspath('.')}
+	return render(request, template_name='index.html', context=context)
